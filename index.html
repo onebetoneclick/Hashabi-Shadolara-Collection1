@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashabi Shadolar Unisex Wear | Ijebu Ode</title>
+    <style>
+        :root {
+            --primary: #f1c40f; 
+            --dark: #1a252f;    
+            --light: #f8f9fa;   
+            --text: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Times New Roman, Bookman Old Style, Algerian, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            background-color: var(--light);
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: var(--dark);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            color: var(--primary);
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(26, 37, 47, 0.75), rgba(26, 37, 47, 0.75)), 
+                        url('http://i.ibb.co/8nzmdSgH/downloadnnn.jpg') no-repeat center center/cover;
+            height: 65vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            max-width: 600px;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: var(--dark);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #e1b10c;
+        }
+
+        .booking-bar {
+            background: white;
+            max-width: 900px;
+            margin: -40px auto 40px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .booking-field {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .booking-field label {
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #7f8c8d;
+        }
+
+        .booking-field input, .booking-field select {
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            color: var(--dark);
+            margin-bottom: 40px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--dark);
+        }
+
+        .card p {
+            color: #555;
+            font-size: 15px;
+        }
+
+        .hall-btn {
+            background-color: var(--dark);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 15px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .hall-btn:hover {
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: #bdc3c7;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+      /* Modern Selection Cards */
+.selection-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.selection-card {
+    position: relative;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.selection-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(10px);
+}
+
+.card-overlay h3 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.card-overlay p {
+    margin: 10px 0 20px;
+    font-size: 14px;
+}
+
+.select-btn {
+    background: white;
+    color: #333;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.select-btn:hover {
+    background: var(--primary);
+}
+      .designer-footer a{
+    color:#f1c40f;
+    text-decoration:none;
+}
+
+.designer-footer a:hover{
+    text-decoration:underline;
+}
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">✨ Hashabi Shadolar Unisex Wear</a>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a 
+     href="#features">Featured Collection</a></li>
+            <li><a               href="#amenities">Amenities</a></li>
+            <li><a href="#halls">Unisex Wears</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Welcome to Hahsabi Shadolar Unisex Wears</h1>
+        <p>Experience premium luxury, modern comfort, and executive wears in the heart of Ijebu Ode.</p>
+        <a href="https://wa.link/e56a28" target="_blank" class="btn">Chat on WhatsApp to Book</a>
+    </header>
+
+    <div class="booking-bar" id="book">
+        <div class="booking-field">
+          <h5> PLEASE SELECT DATE TO BOOK YOUR ORDER</h5>
+            <label>CHECK-IN / EVENT DATE</label>
+            <input type="date">
+        </div>
+        <div class="booking-field">
+            <label>UNISEX TYPE</label>
+            <select id="bookingType">
+                <option value="room">Jalabia</option>
+                <option value="hall">Abaya</option>
+            </select>
+        </div>
+        <div class="booking-field">
+            <label>UNISEX CAPACITY</label>
+            <select>
+                <option>Standard Unisex Wear</option>
+                <option>Deluxe Unisex Wear</option>
+                <option>Royal Unisex Wear</option>
+            </select>
+        </div>
+        <a href="https://wa.link/e56a28" target="_blank" class="btn" style="margin-top:0; text-align:center;">Check Availability</a>
+    </div>
+
+    <main class="container">
+        <section id="about">
+            <h2 class="section-title">The Pride of Ijebu</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 17px; color: #555;">
+                We Delivered World Wide
+            </p>
+        </section>
+
+        <section id="halls" style="margin-top: 60px;">
+            <h2 class="section-title">Premium Event Hall Sessions</h2>
+            <p style="text-align: center; max-width: 700px; margin: -20px auto 40px auto; color: #666;">
+                Host your landmark events, corporate retreats, or private parties in our fully air-conditioned spaces with dedicated technical and catering standby staff.
+            </p>
+            <div class="grid-layout">
+                <div class="card">
+                    <div>
+                        <h3>🏢 Executive Unisex Wear</h3>
+                        <p> A clothing purposefully designed to be worn comfortably and stylishly by people of any gender. It typically features relaxed, straight-cut silhouettes and neutral colors or minimal gendered styling cues, allowing the same garment to fit and flatter diverse body types across the gender spectrum.</p>
+                        <p><strong>Capacity:</strong> Unlimited</p>
+                    </div>
+                    <a href="https://wa.me." target="_blank" class="hall-btn">Book Session</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>🎉 Silver Unisex Wears</h3>
+                        <p> A jewelry in a silver color, tone, or material that is designed to be worn by anyone, regardless of gender. It bridges the gap between traditional men's and women's clothing, relying on versatile cuts and universal appeal.</p>
+                        <p><strong>Capacity:</strong> Unlimited</p>
+                    </div>
+                    <a href="https://wa.link/e56a28" target="_blank" class="hall-btn">Book Session</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>👑 Grand Unisex Wear</h3>
+                        <p>A generic term describing apparel or a brand offering versatile clothing intentionally designed to be worn by anyone, regardless of gender. These garments bypass traditional, strictly gendered shapes in favor of inclusive sizing and relaxed silhouettes</p>
+                        <p><strong>Capacity:</strong> Unlimited</p>
+                    </div>
+                    <a href="https://wa.me." target="_blank" class="hall-btn">Book Session</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="amenities" style="margin-top: 60px;">
+            <h2 class="section-title">Our Premium Amenities</h2>
+            <div class="grid-layout">
+                <div class="card">
+                    <h3>Upcoming Facilities</h3>
+              </div>
+          </div>
+          </section>
+      <section id="contact" style="margin-top: 10px;">
+        <h2 class="section-title">Contact</h2>
+        <div class="grid-layout">
+          <div class="card">
+            <h3><a href="https://wa.link/e56a28" target="_blank" class="hall-btn">Contact Us</a></h3>
+          </div>
+        </div>
+        <section id="collections" style="margin-top:60px;">
+          <section id="features" style="margin-top: 60px;">
+    <h2 class="section-title">Featured Collections</h2>
+
+    <div class="selection-cards">
+
+        <div class="selection-card">
+            <img src="https://i.ibb.co/6JBYF7s6/images-5-33.jpg" alt="Collection 1">
+
+            <div class="card-overlay">
+                <h3>Jalabia</h3>
+                <p>Premium traditional wear collection.</p>
+                <a href="https://wa.link/e56a28" class="select-btn">GET</a>
+            </div>
+        </div>
+
+        <div class="selection-card">
+            <img src="https://i.ibb.co/SDbMfskc/images-5-333.jpg" alt="Collection 2">
+
+            <div class="card-overlay">
+                <h3>Abaya</h3>
+                <p>Elegant and stylish designs.</p>
+                <a href="https://wa.link/e56a28" class="select-btn">GET</a>
+            </div>
+        </div>
+
+        <div class="selection-card">
+            <img src="https://i.ibb.co/1fLjpXZs/images-5-3333.jpg" alt="Collection 3">
+
+            <div class="card-overlay">
+                <h3>Grand Wear</h3>
+                <p>Luxury fashion for every occasion.</p>
+                <a href="product.html" class="select-btn">GET</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+          <footer class="designer-footer">
+    <p>© 2026 Hashabi Shadolar Unisex Wear | Designed by <a href="#">Don Martial</a></p>
+</footer>
